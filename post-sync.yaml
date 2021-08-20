@@ -1,15 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  generateName: myapp
+  generateName: post-sync
   annotations:
     argocd.argoproj.io/hook: PostSync
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
   labels:
-    name: myapp
+    name: post-sync
 spec:
   containers:
-  - name: myapp
+  - name: post-sync
     image: mouhsen47/check-apps:0.1.1
     resources:
       limits:
