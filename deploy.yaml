@@ -13,10 +13,10 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: nginx:lates
+        image: nginx:latest
         resources:
           limits:
-            memory: "100Mi"
+            memory: "200Mi"
             cpu: "300m"
         ports:
         - containerPort: 80
