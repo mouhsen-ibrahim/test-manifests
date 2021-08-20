@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: myapp2
-        image: nginx:lates
+        image: nginx:latest
         resources:
           limits:
             memory: "128Mi"

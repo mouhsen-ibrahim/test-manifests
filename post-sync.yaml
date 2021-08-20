@@ -10,11 +10,8 @@ metadata:
 spec:
   containers:
   - name: myapp
-    image: busybox
-    command:
-      - "sleep"
-      - "10000000d"
+    image: mouhsen47/check-apps:0.1.0
     resources:
       limits:
         memory: "128Mi"
-        cpu: "500m"
+        cpu: "100m"
