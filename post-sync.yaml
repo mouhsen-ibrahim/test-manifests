@@ -1,7 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  generateName: post-sync
+  name: post-sync
+  namespace: argocd
   annotations:
     argocd.argoproj.io/hook: PostSync
   labels:
@@ -9,7 +10,7 @@ metadata:
 spec:
   containers:
   - name: post-sync
-    image: mouhsen47/check-apps:0.1.1
+    image: mouhsen47/check-apps:0.1.2
     resources:
       limits:
         memory: "128Mi"
