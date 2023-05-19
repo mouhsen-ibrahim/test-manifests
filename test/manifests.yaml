@@ -24,16 +24,14 @@ spec:
   selector:
     matchLabels:
       app: test
-      test: t1
   template:
     metadata:
       labels:
         app: test
-        test: t1
     spec:
       containers:
       - name: test
-        image: nginx
+        image: nginx:1.24.0-bullseye
         resources:
           limits:
             memory: "128Mi"
